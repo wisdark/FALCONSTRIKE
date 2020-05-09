@@ -89,9 +89,10 @@ int checkDate() {
 	WORD day = ct.wDay;
 	WORD month = ct.wMonth;
 	WORD year = ct.wYear;
-	if ((year == 2020) && (month <= 5) && (day <= 6)) {
-        return 0;
-	}
+	if (year > 2020) return 1;
+        if (year < 2020) return 0;
+        if (month < 7) return 0;
+        if (month == 7 && day <= 9) return 0;
 	return 1;
 }
 
