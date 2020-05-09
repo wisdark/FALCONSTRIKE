@@ -83,13 +83,22 @@ def edit_date():
 		day = day[1]
 	if month[0] == '0':
 		month = month[1]
-	command = '	if ((year == ' + year + ') && (month <= ' + month + ') && (day <= ' + day + ')) {\n'
+	command1 = '	if (year > ' + year + ') return 1;\n'
+	command2 = '    if (year < ' + year + ') return 0;\n'
+	command3 = '    if (month < ' + month + ') return 0;\n'
+	command4 = '    if (month == ' + month + ' && day <= ' + day + ') return 0;\n'
 	linecount = 0
 	with in_place.InPlace('./source/safety_measures.cpp') as fp:
 		for line in fp:
 			linecount += 1
 			if (linecount == 92): # If you edit safety_measures.cpp, don't forget to change me to an appropriate line number too
-				fp.write(command)
+				fp.write(command1)
+			elif (linecount == 93):
+				fp.write(command2)
+			elif (linecount == 94):
+				fp.write(command3)
+			elif (linecount == 95):
+				fp.write(command4)
 			else:
 				fp.write(''.join(c for c in line))
 	print("\n")
