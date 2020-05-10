@@ -15,6 +15,17 @@ Introducing FalconZero v1.0 - a stealthy, targeted Windows Loader for delivering
 - [X] Stealthy shellcode injection technique without allocating RWX memory pages in victim process to evade AV/EDRs - currently injects to `explorer.exe`
 - [X] Sensitive strings encrypted using XOR
 
+## Payload Compatibility
+- [X] [Metasploit](https://www.metasploit.com/)
+- [X] [Covenant C2](https://cobbr.io/Covenant.html)
+- [X] [Cobalt Strike](https://www.cobaltstrike.com/)
+- [X] [SILENTTRINITY](https://github.com/byt3bl33d3r/SILENTTRINITY)
+- [X] [Faction C2](https://www.factionc2.com/)
+- [X] [Throwback](https://github.com/silentbreaksec/Throwback)
+And support for many more...
+
+The ones mentioned in the list are the ones verified by the [testing team](https://github.com/Sumalyo).
+
 ## Demo
 ![GIF demo](demo.gif)
 
@@ -56,7 +67,7 @@ Feel free to communicate any further feature that you want to see in the next re
 Upayan ([@slaeryan](https://twitter.com/slaeryan)) [[slaeryan.github.io](https://slaeryan.github.io)]
 
 ## License
-All the code included in this project is licensed under the terms of the GNU AGPLv3 license.
+All the code included in this project is licensed under the terms of the GNU GPLv3 license.
 
 #
 
