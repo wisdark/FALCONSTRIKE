@@ -1,7 +1,7 @@
 # FalconZero
 [![](https://img.shields.io/badge/Category-Defense%20Evasion-E5A505?style=flat-square)]() [![](https://img.shields.io/badge/Language-C%20%2f%20C++%20%2f%20Python3-E5A505?style=flat-square)]() [![](https://img.shields.io/badge/Version-1.0-E5A505?style=flat-square)]()
 
-Introducing FalconZero v1.0 - a stealthy, targeted Windows Loader for delivering second-stage payloads(shellcode) to the host machine undetected - first public release version Loader/Dropper of the FALCONSTRIKE project
+Introducing FalconZero v1.0 - a stealthy, targeted Windows Loader for delivering second-stage payloads(shellcode) from Github to the host machine undetected - first public release version Loader/Dropper of the FALCONSTRIKE project
 
 <p align="center">
   <img src="FALCONSTRIKE.png">
@@ -9,10 +9,10 @@ Introducing FalconZero v1.0 - a stealthy, targeted Windows Loader for delivering
 
 ## Features
 - [X] Dynamic shellcode execution
-- [X] Usage of Github as the payload storage area - the payload is fetched from Github
-- [X] Targeted implant Loader - only execute on targeted assets - thwart automated malware analysis and hinder reverse engineering on non-targeted assets
+- [X] Usage of Github as the payload storage area - the payload is fetched from Github - using legitimate sites for implant communication to make it stealthier
+- [X] Targeted implant Loader - only execute on targeted assets - thwart automated malware analysis and hinder reverse engineering efforts on non-targeted assets
 - [X] Killdates - implant expires after a specific date
-- [X] Stealthy shellcode injection technique without allocating RWX memory pages in victim process to evade AV/EDRs - currently injects to `explorer.exe`
+- [X] Stealthy shellcode injection technique without allocating RWX memory pages in victim process to evade AV/EDRs - Process hollowing - currently spawns and injects to `explorer.exe`
 - [X] Sensitive strings encrypted using XOR
 
 ## Payload Compatibility
